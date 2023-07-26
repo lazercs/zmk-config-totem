@@ -32,6 +32,12 @@
 / {
     combos {
         compatible = "zmk,combos";
+
+        new_combo {
+            bindings = <&mo 3>;
+            key-positions = <20 31>;
+            layers = <0>;
+        };
     };
 
     macros {
