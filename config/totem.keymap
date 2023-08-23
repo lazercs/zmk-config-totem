@@ -169,10 +169,10 @@
 
         GAME_ADJ {
             bindings = <
-       &kp Z  &kp NUMBER_1  &kp  &kp NUMBER_2  &kp NUMBER_3  &kp       &kp  &kp UP_ARROW        &kp  &kp
-       &kp X           &kp  &kp           &kp         &kp G  &kp  &kp LEFT      &kp DOWN  &kp RIGHT  &kp
-&kp T  &kp B           &kp  &kp  &kp NUMBER_4  &kp NUMBER_5  &kp       &kp           &kp        &kp  &kp  &kp
-                            &kp           &kp           &kp  &kp       &kp           &kp
+       &kp Z  &kp NUMBER_1  &trans  &kp NUMBER_2  &kp NUMBER_3  &trans    &trans  &kp UP_ARROW     &trans  &trans
+       &kp X        &trans  &trans        &trans         &kp G  &trans  &kp LEFT      &kp DOWN  &kp RIGHT  &trans
+&kp T  &kp B        &trans  &trans  &kp NUMBER_4  &kp NUMBER_5  &trans    &trans        &trans     &trans  &trans  &trans
+                            &trans        &trans        &trans  &trans    &trans        &trans
             >;
 
             label = "gadj";
