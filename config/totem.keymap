@@ -58,30 +58,19 @@
                  &kp Q  &kp W           &kp F        &kp P             &kp B      &kp J      &kp L              &kp U                &kp Y            &kp SQT
                  &kp A  &mt LEFT_ALT R  &mt LCTRL S  &mt LEFT_SHIFT T  &kp G      &kp M      &mt RIGHT_SHIFT N  &mt RIGHT_CONTROL E  &mt RIGHT_ALT I  &kp O
 &kp LA(LC(TAB))  &kp Z  &kp X           &kp C        &kp D             &kp V      &kp K      &kp H              &kp COMMA            &kp DOT          &kp FSLH  &kp RIGHT_GUI
-                                        &lt 7 ESC    &lt 5 SPACE       &lt 6 TAB  &lt 4 DEL  &lt 3 BACKSPACE    &kp ENTER
+                                        &lt 6 ESC    &lt 4 SPACE       &lt 5 TAB  &lt 3 DEL  &lt 2 BACKSPACE    &kp ENTER
             >;
         };
 
         QWERTY {
             bindings = <
-        &kp Q  &kp W  &kp E   &kp R   &kp T   &kp Y   &kp U   &kp I      &kp O       &kp P
-        &kp A  &kp S  &kp D   &kp F   &kp G   &kp H   &kp J   &kp K      &kp L       &kp SEMICOLON
-&trans  &kp Z  &kp X  &kp C   &kp V   &kp B   &kp N   &kp M   &kp COMMA  &kp PERIOD  &kp SLASH      &trans
-                      &trans  &trans  &trans  &trans  &trans  &trans
+        &kp Q  &kp W            &kp E               &kp R             &kp T   &kp Y   &kp U              &kp I                &kp O            &kp P
+        &kp A  &mt RIGHT_ALT S  &mt LEFT_CONTROL D  &mt LEFT_SHIFT F  &kp G   &kp H   &mt RIGHT_SHIFT J  &mt RIGHT_CONTROL K  &mt RIGHT_ALT L  &kp SEMICOLON
+&trans  &kp Z  &kp X            &kp C               &kp V             &kp B   &kp N   &kp M              &kp COMMA            &kp PERIOD       &kp SLASH      &trans
+                                &trans              &trans            &trans  &trans  &trans             &trans
             >;
 
             label = "QWERTY";
-        };
-
-        MODS {
-            bindings = <
-             &soft_off  &sys_reset  &tog 1     &to 0      &none  &none  &to 0      &tog 1     &sys_reset  &soft_off
-             &none      &kp LALT    &kp LCTRL  &kp LSHFT  &none  &none  &kp RSHFT  &kp RCTRL  &kp RALT    &none
-&bootloader  &none      &none       &none      &none      &none  &none  &none      &none      &none       &none      &bootloader
-                                    &none      &none      &none  &none  &none      &none
-            >;
-
-            label = "MODS";
         };
 
         nav_layer {
@@ -101,19 +90,19 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &kp PAGE_UP    &kp HOME   &kp UP      &kp END      &kp INS     &none  &trans  &trans  &trans  &trans
-       &kp PAGE_DOWN  &kp LEFT   &kp DOWN    &kp RIGHT    &kp CAPS    &none  &trans  &trans  &trans  &none
-&none  &kp K_UNDO     &kp K_CUT  &kp K_COPY  &kp K_PASTE  &kp K_REDO  &none  &none   &none   &none   &none   &trans
-                                 &kp ESC     &kp SPACE    &kp TAB     &none  &none   &none
+       &kp PAGE_UP    &kp HOME   &kp UP     &kp END    &kp INS    &none  &to 0      &tog 1     &sys_reset  &soft_off
+       &kp PAGE_DOWN  &kp LEFT   &kp DOWN   &kp RIGHT  &kp CAPS   &none  &kp ENTER  &kp RCTRL  &kp RALT    &none
+&none  &kp LC(Z)      &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(Y)  &none  &none      &none      &none       &none      &bootloader
+                                 &kp ESC    &kp SPACE  &kp TAB    &none  &none      &none
             >;
         };
 
         media_layer {
             bindings = <
-       &none         &none         &none            &to 8             &bt BT_CLR         &none  &trans  &trans  &trans  &trans
-       &kp C_PREV    &kp C_VOL_DN  &kp C_VOLUME_UP  &kp C_NEXT        &ext_power EP_TOG  &none  &trans  &trans  &trans  &none
-&none  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1     &bt BT_SEL 0      &out OUT_TOG       &none  &none   &none   &none   &none   &trans
-                                   &kp C_STOP       &kp C_PLAY_PAUSE  &kp C_MUTE         &none  &none   &none
+       &none         &none         &none            &to 7             &bt BT_CLR         &none  &to 0      &tog 1     &sys_reset  &soft_off
+       &kp C_PREV    &kp C_VOL_DN  &kp C_VOLUME_UP  &kp C_NEXT        &ext_power EP_TOG  &none  &kp ENTER  &kp RCTRL  &kp RALT    &none
+&none  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1     &bt BT_SEL 0      &out OUT_TOG       &none  &none      &none      &none       &none      &bootloader
+                                   &kp C_STOP       &kp C_PLAY_PAUSE  &kp C_MUTE         &none  &none      &none
             >;
 
             label = "media";
@@ -121,10 +110,10 @@
 
         number_layer {
             bindings = <
-        &trans  &trans  &trans  &trans  &none  &kp LEFT_BRACKET  &kp N7        &kp N8        &kp N9        &kp RIGHT_BRACKET
-        &none   &trans  &trans  &trans  &none  &kp SEMICOLON     &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp EQUAL
-&trans  &none   &none   &none   &none   &none  &kp GRAVE         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp BSLH           &none
-                        &none   &none   &none  &kp MINUS         &kp N0        &kp PERIOD
+             &soft_off  &sys_reset  &tog 1    &to 0      &none  &kp LEFT_BRACKET  &kp N7        &kp N8        &kp N9        &kp RIGHT_BRACKET
+             &none      &kp LCTRL   &kp LALT  &kp LSHFT  &none  &kp SEMICOLON     &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp EQUAL
+&bootloader  &none      &none       &none     &none      &none  &kp GRAVE         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp BSLH           &none
+                                    &none     &none      &none  &kp MINUS         &kp N0        &kp PERIOD
             >;
 
             label = "NUM";
@@ -147,10 +136,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &trans  &trans  &trans  &trans  &none  &kp LEFT_BRACE  &kp AMPERSAND         &kp ASTERISK           &kp LEFT_PARENTHESIS  &kp RIGHT_BRACE
-        &none   &trans  &trans  &trans  &none  &kp PLUS        &kp DOLLAR            &kp PERCENT            &kp CARET             &kp COLON
-&trans  &none   &none   &none   &none   &none  &kp PIPE        &kp EXCL              &kp AT_SIGN            &kp HASH              &kp TILDE        &none
-                        &none   &none   &none  &kp UNDERSCORE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+             &soft_off  &sys_reset  &tog 1    &to 0      &none  &kp LEFT_BRACE  &kp AMPERSAND         &kp ASTERISK           &kp LEFT_PARENTHESIS  &kp RIGHT_BRACE
+             &none      &kp LCTRL   &kp LALT  &kp LSHFT  &none  &kp PLUS        &kp DOLLAR            &kp PERCENT            &kp CARET             &kp COLON
+&bootloader  &none      &none       &none     &none      &none  &kp PIPE        &kp EXCL              &kp AT_SIGN            &kp HASH              &kp TILDE        &none
+                                    &none     &none      &none  &kp UNDERSCORE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
             >;
         };
 
@@ -171,10 +160,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &trans  &trans  &trans  &trans  &none  &kp LG(LS(S))    &kp F7         &kp F8     &kp F9  &kp F12
-        &none   &trans  &trans  &trans  &none  &kp SCROLLLOCK   &kp F4         &kp F5     &kp F6  &kp F11
-&trans  &none   &none   &none   &none   &none  &kp PAUSE_BREAK  &kp F1         &kp F2     &kp F3  &kp F10  &none
-                        &none   &none   &none  &kp DEL          &kp BACKSPACE  &kp ENTER
+             &soft_off  &sys_reset  &tog 1     &to 0      &none  &kp LG(LS(S))    &kp F7         &kp F8     &kp F9  &kp F12
+             &none      &kp LALT    &kp LCTRL  &kp LSHFT  &none  &kp SCROLLLOCK   &kp F4         &kp F5     &kp F6  &kp F11
+&bootloader  &none      &none       &none      &none      &none  &kp PAUSE_BREAK  &kp F1         &kp F2     &kp F3  &kp F10  &none
+                                    &none      &none      &none  &kp DEL          &kp BACKSPACE  &kp ENTER
             >;
         };
 
@@ -183,7 +172,7 @@
             &kp TAB    &kp Q  &kp W     &kp E      &kp R  &kp Y  &kp U     &kp I      &kp O       &kp P
             &kp LSHFT  &kp A  &kp S     &kp D      &kp F  &kp H  &kp J     &kp K      &kp L       &kp SEMICOLON
 &kp ESCAPE  &kp LCTRL  &kp Z  &kp X     &kp C      &kp V  &kp N  &kp M     &kp COMMA  &kp PERIOD  &kp C_PP       &kp LA(LC(TAB))
-                              &kp LALT  &kp SPACE  &mo 9  &to 0  &kp BSPC  &kp ENTER
+                              &kp LALT  &kp SPACE  &mo 8  &to 0  &kp BSPC  &kp ENTER
             >;
 
             label = "GAME";
@@ -205,7 +194,7 @@
         compatible = "zmk,conditional-layers";
 
         MODS {
-            if-layers = <3 4 5 6 7>;
+            if-layers = <2 3 4 5 6>;
             then-layer = <2>;
         };
     };
