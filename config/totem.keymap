@@ -58,7 +58,7 @@
                  &kp Q  &kp W           &kp F        &kp P             &kp B      &kp J      &kp L              &kp U                &kp Y            &kp SQT
                  &kp A  &mt LEFT_ALT R  &mt LCTRL S  &mt LEFT_SHIFT T  &kp G      &kp M      &mt RIGHT_SHIFT N  &mt RIGHT_CONTROL E  &mt RIGHT_ALT I  &kp O
 &kp LA(LC(TAB))  &kp Z  &kp X           &kp C        &kp D             &kp V      &kp K      &kp H              &kp COMMA            &kp DOT          &kp FSLH  &kp RIGHT_GUI
-                                        &lt 8 ESC    &lt 5 SPACE       &lt 9 TAB  &lt 4 DEL  &lt 3 BACKSPACE    &kp ENTER
+                                        &lt 7 ESC    &lt 5 SPACE       &lt 6 TAB  &lt 4 DEL  &lt 3 BACKSPACE    &kp ENTER
             >;
         };
 
