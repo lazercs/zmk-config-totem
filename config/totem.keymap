@@ -90,10 +90,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &kp PAGE_UP    &kp HOME   &kp UP     &kp END    &kp INS    &none  &to 0      &tog 1     &sys_reset  &soft_off
-       &kp PAGE_DOWN  &kp LEFT   &kp DOWN   &kp RIGHT  &kp CAPS   &none  &kp ENTER  &kp RCTRL  &kp RALT    &none
-&none  &kp LC(Z)      &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(Y)  &none  &none      &none      &none       &none      &bootloader
-                                 &kp ESC    &kp SPACE  &kp TAB    &none  &none      &none
+       &kp INS    &kp HOME   &kp UP     &kp END    &kp PG_UP      &none  &to 0      &tog 1     &sys_reset  &soft_off
+       &kp CAPS   &kp LEFT   &kp DOWN   &kp RIGHT  &kp PAGE_DOWN  &none  &kp ENTER  &kp RCTRL  &kp RALT    &none
+&none  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(Y)      &none  &none      &none      &none       &none      &bootloader
+                             &kp ESC    &kp SPACE  &kp TAB        &none  &none      &none
             >;
         };
 
@@ -190,12 +190,5 @@
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        MODS {
-            if-layers = <2 3 4 5 6>;
-            then-layer = <2>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
