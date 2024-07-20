@@ -64,10 +64,10 @@
 
         QWERTY {
             bindings = <
-        &kp Q  &kp W            &kp E               &kp R             &kp T   &kp Y   &kp U              &kp I                &kp O            &kp P
-        &kp A  &mt RIGHT_ALT S  &mt LEFT_CONTROL D  &mt LEFT_SHIFT F  &kp G   &kp H   &mt RIGHT_SHIFT J  &mt RIGHT_CONTROL K  &mt RIGHT_ALT L  &kp SEMICOLON
-&trans  &kp Z  &kp X            &kp C               &kp V             &kp B   &kp N   &kp M              &kp COMMA            &kp PERIOD       &kp SLASH      &trans
-                                &trans              &trans            &trans  &trans  &trans             &trans
+        &kp Q  &kp W           &kp E               &kp R             &kp T   &kp Y   &kp U              &kp I                &kp O            &kp P
+        &kp A  &mt LEFT_ALT S  &mt LEFT_CONTROL D  &mt LEFT_SHIFT F  &kp G   &kp H   &mt RIGHT_SHIFT J  &mt RIGHT_CONTROL K  &mt RIGHT_ALT L  &kp SEMICOLON
+&trans  &kp Z  &kp X           &kp C               &kp V             &kp B   &kp N   &kp M              &kp COMMA            &kp PERIOD       &kp SLASH      &trans
+                               &trans              &trans            &trans  &trans  &trans             &trans
             >;
 
             label = "QWERTY";
@@ -90,19 +90,19 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &kp INS    &kp HOME   &kp UP     &kp END    &kp PG_UP      &none  &to 0      &tog 1     &sys_reset  &soft_off
-       &kp CAPS   &kp LEFT   &kp DOWN   &kp RIGHT  &kp PAGE_DOWN  &none  &kp ENTER  &kp RCTRL  &kp RALT    &none
-&none  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(Y)      &none  &none      &none      &none       &none      &bootloader
-                             &kp ESC    &kp SPACE  &kp TAB        &none  &none      &none
+       &kp INS    &kp HOME   &kp UP     &kp END    &kp PG_UP      &none  &to 0            &tog 1     &sys_reset  &soft_off
+       &kp CAPS   &kp LEFT   &kp DOWN   &kp RIGHT  &kp PAGE_DOWN  &none  &kp RIGHT_SHIFT  &kp RCTRL  &kp RALT    &none
+&none  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(Y)      &none  &none            &none      &none       &none      &bootloader
+                             &kp ESC    &kp SPACE  &kp TAB        &none  &none            &none
             >;
         };
 
         media_layer {
             bindings = <
-              &none         &none         &none            &to 7             &bt BT_CLR         &none  &to 0      &tog 1     &sys_reset  &soft_off
-              &kp C_PREV    &kp C_VOL_DN  &kp C_VOLUME_UP  &kp C_NEXT        &ext_power EP_TOG  &none  &kp ENTER  &kp RCTRL  &kp RALT    &none
-&bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1     &bt BT_SEL 0      &out OUT_TOG       &none  &none      &none      &none       &none      &bootloader
-                                          &kp C_STOP       &kp C_PLAY_PAUSE  &kp C_MUTE         &none  &none      &none
+              &none         &none         &none            &to 7             &bt BT_CLR         &none  &to 0            &tog 1     &sys_reset  &soft_off
+              &kp C_PREV    &kp C_VOL_DN  &kp C_VOLUME_UP  &kp C_NEXT        &ext_power EP_TOG  &none  &kp RIGHT_SHIFT  &kp RCTRL  &kp RALT    &none
+&bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1     &bt BT_SEL 0      &out OUT_TOG       &none  &none            &none      &none       &none      &bootloader
+                                          &kp C_STOP       &kp C_PLAY_PAUSE  &kp C_MUTE         &none  &none            &none
             >;
 
             label = "media";
@@ -136,10 +136,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-             &soft_off  &sys_reset  &tog 1    &to 0      &none  &kp LEFT_BRACE  &kp AMPERSAND         &kp ASTERISK           &kp LEFT_PARENTHESIS  &kp RIGHT_BRACE
-             &none      &kp LCTRL   &kp LALT  &kp LSHFT  &none  &kp PLUS        &kp DOLLAR            &kp PERCENT            &kp CARET             &kp COLON
-&bootloader  &none      &none       &none     &none      &none  &kp PIPE        &kp EXCL              &kp AT_SIGN            &kp HASH              &kp TILDE        &none
-                                    &none     &none      &none  &kp UNDERSCORE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+             &soft_off  &sys_reset    &tog 1            &to 0      &none  &kp LEFT_BRACE  &kp AMPERSAND         &kp ASTERISK           &kp LEFT_PARENTHESIS  &kp RIGHT_BRACE
+             &none      &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LSHFT  &none  &kp PLUS        &kp DOLLAR            &kp PERCENT            &kp CARET             &kp COLON
+&bootloader  &none      &none         &none             &none      &none  &kp PIPE        &kp EXCL              &kp AT_SIGN            &kp HASH              &kp TILDE        &none
+                                      &none             &none      &none  &kp UNDERSCORE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
             >;
         };
 
