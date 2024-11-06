@@ -189,7 +189,6 @@
 
             label = "gadj";
         };
-    };
 
   mouse_layer {
             display-name = "MSE";
@@ -199,7 +198,10 @@
 &trans  &trans    &trans    &trans     &trans     &trans    &trans          &mkp MB4        &mkp MCLK       &mkp MB5         &trans           &trans
                             &trans     &trans     &trans    &mkp LCLK       &mkp RCLK       &trans
             >;
+
+            label = "mouse";
         };
+    };
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
 };
