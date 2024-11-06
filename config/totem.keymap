@@ -10,6 +10,7 @@
 //
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
+#include "mouse.dsti"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
@@ -189,6 +190,16 @@
             label = "gadj";
         };
     };
+
+  mouse_layer {
+            display-name = "MSE";
+            bindings = <
+        &trans    &trans    &trans     &trans     &trans    &msc SCRL_LEFT  &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &msc SCRL_RIGHT
+        &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &trans          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans
+&trans  &trans    &trans    &trans     &trans     &trans    &trans          &mkp MB4        &mkp MCLK       &mkp MB5         &trans           &trans
+                            &trans     &trans     &trans    &mkp LCLK       &mkp RCLK       &trans
+            >;
+        };
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
 };
