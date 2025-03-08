@@ -59,7 +59,7 @@
                  &kp Q  &kp W           &kp F        &kp P             &kp B      &kp J      &kp L              &kp U                &kp Y            &kp SQT
                  &kp A  &mt LEFT_ALT R  &mt LCTRL S  &mt LEFT_SHIFT T  &kp G      &kp M      &mt RIGHT_SHIFT N  &mt RIGHT_CONTROL E  &mt RIGHT_ALT I  &kp O
 &kp LA(LC(TAB))  &kp Z  &kp X           &kp C        &kp D             &kp V      &kp K      &kp H              &kp COMMA            &kp DOT          &kp FSLH  &kp RIGHT_GUI
-                                        &lt 6 ESC    &lt 4 SPACE       &lt 5 TAB  &lt 3 DEL  &lt 2 BACKSPACE    &kp ENTER
+                                        &lt 6 ESC    &lt 4 SPACE       &lt 5 TAB  &lt 3 DEL  &lt 2 BACKSPACE    &lt 9 ENTER
             >;
         };
 
@@ -188,6 +188,15 @@
             >;
 
             label = "gadj";
+        };
+
+        mouse {
+            bindings = <
+        &trans  &trans          &mmv MOVE_UP    &trans           &trans  &trans  &trans    &trans    &trans  &trans
+        &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans  &mkp MB1  &mkp MB2  &trans  &trans
+&trans  &trans  &trans          &trans          &trans           &trans  &trans  &trans    &trans    &trans  &trans  &trans
+                                &trans          &trans           &trans  &trans  &trans    &trans
+            >;
         };
     };
 
