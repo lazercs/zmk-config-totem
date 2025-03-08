@@ -195,7 +195,7 @@
        &none  &none           &mmv MOVE_UP    &none            &none  &none  &none     &none     &none  &none
        &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none  &none  &mkp MB1  &mkp MB2  &none  &none
 &none  &none  &none           &none           &none            &none  &none  &none     &none     &none  &none  &to 0
-                              &none           &none            &none  &none  &none     &trans
+                              &none           &none            &none  &none  &none     &none
             >;
         };
     };
